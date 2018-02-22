@@ -13,7 +13,7 @@ private:
 	//Note: dont name things "th" (confusing latter)
 
 	const int TILE_SIZE = 50;
-	const int VERTS_IN_QUAD = 4:
+	const int VERTS_IN_QUAD = 4;
 	const int GRAVITY = 300;
 
 	//a regular RenderWindow
@@ -27,7 +27,7 @@ private:
 	//three views for background
 	View m_BGMainView;
 	View m_BGLeftView;
-	View m_BGRightiew;
+	View m_BGRightView;
 
 	View m_HudView;
 

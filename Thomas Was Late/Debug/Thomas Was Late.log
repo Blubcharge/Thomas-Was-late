@@ -1,12 +1,14 @@
-﻿Build started 22/02/2018 10:08:59.
+﻿Build started 22/02/2018 10:26:52.
      1>Project "E:\collage\HND\Programing\PROJECTS\Thomas Was Late\Thomas-Was-late\Thomas Was Late\Thomas Was Late.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"SFML-2.4.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Thomas Was Late.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt TextureHolder.cpp Main.cpp
-         Main.cpp
-         TextureHolder.cpp
-         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"SFML-2.4.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Thomas Was Late.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Engine.cpp
+         Engine.cpp
+     1>e:\collage\hnd\programing\projects\thomas was late\thomas-was-late\thomas was late\engine.cpp(21): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+     1>e:\collage\hnd\programing\projects\thomas was late\thomas-was-late\thomas was late\engine.cpp(22): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+     1>e:\collage\hnd\programing\projects\thomas was late\thomas-was-late\thomas was late\engine.cpp(24): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\collage\HND\Programing\PROJECTS\Thomas Was Late\Thomas-Was-late\Thomas Was Late\Debug\Thomas Was Late.exe" /INCREMENTAL /NOLOGO /LIBPATH:"SFML-2.4.2\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\collage\HND\Programing\PROJECTS\Thomas Was Late\Thomas-Was-late\Thomas Was Late\Debug\Thomas Was Late.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\collage\HND\Programing\PROJECTS\Thomas Was Late\Thomas-Was-late\Thomas Was Late\Debug\Thomas Was Late.lib" /MACHINE:X86 Debug\stdafx.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\collage\HND\Programing\PROJECTS\Thomas Was Late\Thomas-Was-late\Thomas Was Late\Debug\Thomas Was Late.exe" /INCREMENTAL /NOLOGO /LIBPATH:"SFML-2.4.2\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\collage\HND\Programing\PROJECTS\Thomas Was Late\Thomas-Was-late\Thomas Was Late\Debug\Thomas Was Late.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\collage\HND\Programing\PROJECTS\Thomas Was Late\Thomas-Was-late\Thomas Was Late\Debug\Thomas Was Late.lib" /MACHINE:X86 Debug\Engine.obj
+         Debug\stdafx.obj
          Debug\TextureHolder.obj
          Debug\Main.obj
          Thomas Was Late.vcxproj -> E:\collage\HND\Programing\PROJECTS\Thomas Was Late\Thomas-Was-late\Thomas Was Late\Debug\Thomas Was Late.exe
@@ -14,4 +16,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.28
+Time Elapsed 00:00:01.27
