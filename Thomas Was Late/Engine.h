@@ -1,0 +1,70 @@
+#pragma once
+#include <sfml/Graphics.hpp>
+#include "TextureHolder.h"
+
+using namespace sf;
+//Note Dont use "using" in .h files!!!!!!!!!!!!!!!!!!!
+
+class Engine
+{
+private:
+	//the texture holder
+	TextureHolder th;
+	//Note: dont name things "th" (confusing latter)
+
+	const int TILE_SIZE = 50;
+	const int VERTS_IN_QUAD = 4:
+	const int GRAVITY = 300;
+
+	//a regular RenderWindow
+	RenderWindow m_Window;
+
+	//the main view
+	View m_MainView;
+	View m_LeftView;
+	View m_RightView;
+
+	//three views for background
+	View m_BGMainView;
+	View m_BGLeftView;
+	View m_BGRightiew;
+
+	View m_HudView;
+
+	//sprite and texture for background
+	Sprite m_BackgroundSprite;
+	Texture m_BackgroundTexture;
+
+	//is the game currently playing??
+	bool m_Playing = false;
+
+	//is character1 or 2 the current focus
+	bool m_Character1 = true;
+	//Note: use enum insted, name better
+
+	//full or split screen
+	bool m_SplitScreen = false;
+
+	//time left in curent level
+	float m_TimeRemaining = 10;
+	Time m_GameTimeTotal;
+
+	//is it time for a new/first Level?
+	bool m_NewLevelRequired;
+
+	//privete functions for internal use
+
+private:
+	void input();
+	void update(float dtAsSeconds);
+	void draw();
+
+public:
+	//constructor
+	Engine();
+	//run will call all the private functions in a loop
+	void run();
+
+
+
+};
