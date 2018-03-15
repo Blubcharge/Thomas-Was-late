@@ -35,6 +35,22 @@ void Engine::input()
 			}
 		}
 
+		//handle incput spesific to thimas
+		if (m_Thomas.handleInput())
+		{
+			//TODO: play jumping sound
+
+
+		}
+
+		//handle incput spesific to BOB
+		if (m_Bob.handleInput())
+		{
+			//TODO: play jumping sound
+
+
+		}
+
 	}// end while event polling
 
 }//end void engine input
