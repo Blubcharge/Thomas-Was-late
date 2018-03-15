@@ -151,13 +151,16 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bob.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="PlayableCharacter.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TextureHolder.h" />
+    <ClInclude Include="Thomas.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bob.cpp" />
     <ClCompile Include="Draw.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Input.cpp" />
@@ -170,6 +173,7 @@
     </ClCompile>
     <ClCompile Include="TextureHolder.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Thomas.cpp" />
     <ClCompile Include="Update.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
