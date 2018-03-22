@@ -24,7 +24,7 @@ void Engine::loadLevel()
 	//spawn thomas and bob
 	m_Thomas.spawn(m_LM.getStartPosition(), GRAVITY);
 	m_Bob.spawn(m_LM.getStartPosition(), GRAVITY);
-
+	m_NewLevelRequired = false;
 
 
 }//end load level function

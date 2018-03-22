@@ -31,6 +31,9 @@ Engine::Engine()
 	//associate the sprite with the texture
 	m_BackgroundSprite.setTexture(m_BackgroundTexture);
 
+	//load the texture of the background vertec array
+	m_TextureTiles = TextureHolder::GetTexture("graphics/tiles_sheet.png");
+
 
 }
 
