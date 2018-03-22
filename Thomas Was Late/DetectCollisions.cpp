@@ -50,7 +50,7 @@ bool Engine::detectCollisions(PlayableCharacter& character)
 	//loop all nearby blocks
 	for (int x = startX; x < endX; ++x)
 	{
-		for (int y = startX; y < endX; ++y)
+		for (int y = startY; y < endY; ++y)
 		{
 			//set up our current block
 			block.left = x * TILE_SIZE;
@@ -58,7 +58,7 @@ bool Engine::detectCollisions(PlayableCharacter& character)
 
 			//have we hjit lava or water
 			//use the head collider on the character as this allows the character to sink a bit into the lava 
-			if (m_ArrayLevel[y][x] ==2||m_ArrayLevel[y][x] ==3)
+ 			if (m_ArrayLevel[y][x] ==2||m_ArrayLevel[y][x] ==3)
 			{
 				if (character.getHead().intersects(block))
 				{
@@ -102,7 +102,7 @@ bool Engine::detectCollisions(PlayableCharacter& character)
 
 			//more colisions here once we have learned abput partoicle effects
 
-			if (m_ArrayLevel[y][x])
+			if (m_ArrayLevel[y][x] == 4)
 			{
 				//character has reached the goal
 				reachGoal = true;
