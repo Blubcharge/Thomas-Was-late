@@ -99,4 +99,92 @@ int** LevelManager::nextLevel(VertexArray& rVaLevel)
 	}
 	//close file 
 	inputFile.close();
+
+	//what type of Primative are we using?
+	rVaLevel.setPrimitiveType(Quads);
+
+	//set size of vertex array
+	rVaLevel.resize(m_LevelSize.x * m_LevelSize.y * VERTS_IN_QUAD);
+
+	//start at the beginning of the cartex array
+	int currentVertex = 0;
+
+	for (int x = 0; x < m_LevelSize.x; ++x)
+	{
+		for (int y = 0; y < m_LevelSize.y; y++)
+		{
+
+			rVaLevel[currentVertex + 0].position = Vector2f(
+				x*TILE_SIZE, 
+				y*TILE_SIZE);
+
+			rVaLevel[currentVertex + 1].position = Vector2f(
+				x*TILE_SIZE + TILE_SIZE,
+				y*TILE_SIZE);
+
+			rVaLevel[currentVertex + 2].position = Vector2f(
+				x*TILE_SIZE + TILE_SIZE,
+				y*TILE_SIZE + TILE_SIZE);
+
+			rVaLevel[currentVertex + 3].position = Vector2f(
+				x*TILE_SIZE,
+				y*TILE_SIZE+ TILE_SIZE);
+
+
+
+
+			//which tile from the sprite sheet shpuld we use
+			int verticalOffset = arrayLevel[y][x] * TILE_SIZE;
+
+
+
+
+			//set up texture coords
+			rVaLevel[currentVertex + 0].texCoords = Vector2f(
+				0,
+				0 + verticalOffset);
+
+			rVaLevel[currentVertex + 1].texCoords = Vector2f(
+				TILE_SIZE,
+				0 + verticalOffset);
+
+			rVaLevel[currentVertex + 2].texCoords = Vector2f(
+				TILE_SIZE,
+				TILE_SIZE + verticalOffset);
+
+			rVaLevel[currentVertex + 3].texCoords = Vector2f(
+				0,
+				TILE_SIZE + verticalOffset);
+
+			//update our current vertex so we can draw the next quad
+			currentVertex = currentVertex + VERTS_IN_QUAD;
+
+
+
+		}//end of Y
+	}//end of x
+
+	return arrayLevel;
+
 }//end level manager 
+
+
+Vector2i LevelManager::getLevelSize()
+{
+	return m_LevelSize;
+}
+
+int LevelManager::getCurrenntLevel()
+{
+	return m_CurrentLevel;
+}
+
+float LevelManager::getTimeLimit()
+{
+	return m_BaseTimeLimit * m_TimeModifier;
+}
+
+Vector2f LevelManager::getStartPosition()
+{
+	return m_StartPosition;
+}
