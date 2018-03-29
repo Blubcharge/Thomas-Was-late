@@ -18,6 +18,10 @@ void Engine::loadLevel()
 	//and repopulate the vertex areray as well
 	m_ArrayLevel = m_LM.nextLevel(m_VALevel);
 
+	//prepare the sound emmitters fot the fire
+	populateEmitter(m_FireEmitter, m_ArrayLevel);
+
+
 	//how long is thge new time linut
 	m_TimeRemaining = m_LM.getTimeLimit();
 
